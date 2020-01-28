@@ -6,7 +6,7 @@ const TeachersSchema = mongoose.Schema({
     age: Number,
     experience: Number,
     startDate: Date,
-    specialization: String
+    specialization: [String]
 }, {
     timestamps: true
 });

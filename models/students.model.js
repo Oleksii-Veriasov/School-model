@@ -4,7 +4,7 @@ const StudentsSchema = mongoose.Schema({
     firstName: String,
     lastName: String,
     age: Number,
-    group: String
+    group: { type: mongoose.Schema.Types.ObjectId, ref: 'Groups' }
 }, {
     timestamps: true
 });

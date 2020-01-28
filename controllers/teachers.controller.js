@@ -77,7 +77,10 @@ exports.update = (req, res) => {
     Teachers.findByIdAndUpdate(req.params.teacherId, {
             firstName: req.body.firstName,
             lastName: req.body.lastName,
-            age: req.body.age
+            age: req.body.age,
+            experience: req.body.experience,
+            startDate: req.body.startDate,
+            specialization: req.body.specialization,
         }, { new: true })
         .then(teacher => {
             if (!teacher) {

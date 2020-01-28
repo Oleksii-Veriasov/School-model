@@ -9,7 +9,7 @@ exports.create = (req, res) => {
         });
     }
     // Create a student
-    const student = new Student({
+    const student = new Students({
         firstName: req.body.firstName,
         lastName: req.body.lastName,
         age: req.body.age,

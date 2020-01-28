@@ -5,7 +5,7 @@ module.exports = (app) => {
     app.post('/students', students.create);
 
     // Retrieve all students
-    app.get('/teachers', teachers.findAll);
+    app.get('/students', students.findAll);
 
     // Retrieve a single student with studentsId
     app.get('/students/:studentsId', students.findOne);

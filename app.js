@@ -6,10 +6,12 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 // Configuring the database
+require('dotenv').config()
 const dbConfig = require('./config/config.js');
 const mongoose = require('mongoose');
 
 mongoose.Promise = global.Promise;
+console.log("url: " + process.env.URL);
 
 // Connecting to the database
 mongoose.connect(dbConfig.url, {
@@ -27,10 +29,13 @@ app.get('/', (req, res) => {
 });
 
 // Require Teachers routes
-require('./routes/teachers.routes.js.js')(app);
+require('./routes/teachers.routes.js')(app);
 
 // Require Students routes
-require('./routes/students.routes.js.js')(app);
+require('./routes/students.routes.js')(app);
+
+// Require Groups routes
+require('./routes/groups.routes.js')(app);
 
 app.listen(3000, () => {
     console.log("Server is listening on port 3000");
