@@ -3,7 +3,10 @@ const mongoose = require('mongoose');
 const TeachersSchema = mongoose.Schema({
     firstName: String,
     lastName: String,
-    age: Number
+    age: Number,
+    experience: Number,
+    startDate: Date,
+    specialization: String
 }, {
     timestamps: true
 });

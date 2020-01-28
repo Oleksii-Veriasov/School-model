@@ -5,14 +5,17 @@ exports.create = (req, res) => {
     console.log(req.body)
     if (!req.body) {
         return res.status(400).send({
-            message: "Note content can not be empty"
+            message: "Teachers content can not be empty"
         });
     }
     // Create a Teacher
     const teacher = new Teachers({
         firstName: req.body.firstName,
         lastName: req.body.lastName,
-        age: req.body.age
+        age: req.body.age,
+        experience: req.body.experience,
+        startDate: req.body.startDate,
+        specialization: req.body.specialization,
     });
 
     // Save Teacher in the database
@@ -70,7 +73,7 @@ exports.update = (req, res) => {
         });
     }
 
-    // Find note and update it with the request body
+    // Find Teachers and update it with the request body
     Teachers.findByIdAndUpdate(req.params.teacherId, {
             firstName: req.body.firstName,
             lastName: req.body.lastName,
@@ -104,7 +107,7 @@ exports.delete = (req, res) => {
                     message: "Not found teacher with id " + req.params.teacherId
                 });
             }
-            res.send({ message: "Note deleted successfully!" });
+            res.send({ message: "Teacher deleted successfully!" });
         }).catch(err => {
             if (err.kind === 'ObjectId' || err.name === 'NotFound') {
                 return res.status(404).send({
