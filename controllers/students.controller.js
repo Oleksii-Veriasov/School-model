@@ -5,7 +5,7 @@ exports.create = (req, res) => {
     console.log(req.body)
     if (!req.body) {
         return res.status(400).send({
-            message: "Note content can not be empty"
+            message: "Students content can not be empty"
         });
     }
     // Create a student

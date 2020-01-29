@@ -7,12 +7,12 @@ module.exports = (app) => {
     // Retrieve all students
     app.get('/students', students.findAll);
 
-    // Retrieve a single student with studentsId
-    app.get('/students/:studentsId', students.findOne);
+    // Retrieve a single student with studentId
+    app.get('/students/:studentId', students.findOne);
 
-    // Update a student with studentsId
-    app.put('/students/:studentsId', students.update);
+    // Update a student with studentId
+    app.put('/students/:studentId', students.update);
 
-    // Delete a student with studentsId
-    app.delete('/students/:studentsId', students.delete);
+    // Delete a student with studentId
+    app.delete('/students/:studentId', students.delete);
 }

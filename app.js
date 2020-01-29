@@ -37,6 +37,12 @@ require('./routes/students.routes.js')(app);
 // Require Groups routes
 require('./routes/groups.routes.js')(app);
 
+// Require Timetables routes
+require('./routes/timetables.routes.js')(app);
+
+// Require Lectures routes
+require('./routes/lectures.routes.js')(app);
+
 app.listen(3000, () => {
     console.log("Server is listening on port 3000");
 });
