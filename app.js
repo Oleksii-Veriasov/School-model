@@ -1,48 +1,43 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const basicAuth = require('./middlewares/auth');
+const errorHandler = require('./middlewares/error-handler');
+const cors = require('cors');
 
 const app = express();
+
+
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+app.use(cors());
+app.use(basicAuth);
 
-// Configuring the database
-require('dotenv').config()
-const dbConfig = require('./config/config.js');
-const mongoose = require('mongoose');
-
-mongoose.Promise = global.Promise;
-console.log("url: " + process.env.URL);
-
-// Connecting to the database
-mongoose.connect(dbConfig.url, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-}).then(() => {
-    console.log("Successfully connected to the database");
-}).catch(err => {
-    console.log('Could not connect to the database. Exiting now...', err);
-    process.exit();
-});
+require('./db/db.js');
 
 app.get('/', (req, res) => {
-    res.json({ "message": "Welcome to School-model application." });
+  res.json({ message: 'Welcome to School-model application.' });
 });
 
 // Require Teachers routes
-require('./routes/teachers.routes.js')(app);
+require('./routes/users/')(app);
+
+// Require Teachers routes
+require('./routes/teachers/')(app);
 
 // Require Students routes
-require('./routes/students.routes.js')(app);
+require('./routes/students/')(app);
 
 // Require Groups routes
-require('./routes/groups.routes.js')(app);
+require('./routes/groups/')(app);
 
 // Require Timetables routes
-require('./routes/timetables.routes.js')(app);
+require('./routes/timetables/')(app);
 
 // Require Lectures routes
-require('./routes/lectures.routes.js')(app);
+require('./routes/lectures/')(app);
 
-app.listen(3000, () => {
-    console.log("Server is listening on port 3000");
+app.use(errorHandler);
+
+app.listen(process.env.PORT, () => {
+  console.log(`Server is listening on port ${process.env.PORT}`);
 });
