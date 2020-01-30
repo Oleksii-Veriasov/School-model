@@ -1,7 +1,8 @@
-## School - API - model<h2> tag
-Used Node.JS, cloud.MongoDB, Mongoose.
+## School - API - model
 
-There are several endpoints:
+#### Used Node.JS, cloud.MongoDB, Mongoose.
+
+**There are several endpoints:**
 
 **Studenrs**
 
@@ -42,14 +43,14 @@ There are several endpoints:
 * PUT /timetables/timetableId update one timetables data in MongoDB;
 * DELETE /timetables/timetableId delate one timetables data from MongoDB;
 
-My DB structure:
+**My DB structure:**
 ![My DB structure:](/DB-structure.png)
 
-_To run, you need the **config /.env** file _ 
+_To run, you need the **config /.env** file_ 
 
-_In .env you find URL and Port_
+_In .env you find **URL** and **Port**_
 
 _Used **Basic Auth** with_ 
 
-* _Username: test_
-* _Password:test_
+* _**Username: test**_
+* _**Password:test**_
