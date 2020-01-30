@@ -6,42 +6,42 @@
 
 **Studenrs**
 
-* POST /students downloads json students data and save to MongoDB;
-* GET /students retrieve all students data in json from MongoDB;
-* GET /students/studentId retrieve one student data in json from MongoDB;
-* PUT /students/studentId update one student data in MongoDB;
-* DELETE /students/studentId delate one student data from MongoDB;
+* POST _/students_ downloads json students data and save to MongoDB;
+* GET _/students_ retrieve all students data in json from MongoDB;
+* GET _/students/studentId_ retrieve one student data in json from MongoDB;
+* PUT _/students/studentId_ update one student data in MongoDB;
+* DELETE _/students/studentId_ delate one student data from MongoDB;
 
 **Groups**
 
-* POST /groups downloads json groups data and save to MongoDB;
-* GET /groups retrieve all groups data in json from MongoDB;
-* GET /groups/groupId retrieve one group data in json from MongoDB;
-* PUT /groups/groupId update one group data in MongoDB;
-* DELETE /groups/groupId delate one group data from MongoDB;
+* POST _/groups_ downloads json groups data and save to MongoDB;
+* GET _/groups_ retrieve all groups data in json from MongoDB;
+* GET _/groups/groupId_ retrieve one group data in json from MongoDB;
+* PUT _/groups/groupId_ update one group data in MongoDB;
+* DELETE _/groups/groupId_ delate one group data from MongoDB;
 
 **Teachers**
 
-* POST /teachers downloads json teachers data and save to MongoDB;
-* GET /teachers retrieve all teachers data in json from MongoDB;
-* GET /teachers/teacherId retrieve one teacher data in json from MongoDB;
-* PUT /teachers/teacherId update one teacher data in  MongoDB;
-* DELETE /teachers/teacherId delate one teachers data from MongoDB;
+* POST _/teachers_ downloads json teachers data and save to MongoDB;
+* GET _/teachers_ retrieve all teachers data in json from MongoDB;
+* GET _/teachers/teacherId_ retrieve one teacher data in json from MongoDB;
+* PUT _/teachers/teacherId_ update one teacher data in  MongoDB;
+* DELETE _/teachers/teacherId_ delate one teachers data from MongoDB;
 
 **Lections**
 
-* POST /lections downloads json lections data and save to MongoDB;
-* GET /lections retrieve all lections data in json from MongoDB;
-* GET /lections/lectionId retrieve one lection data in json from MongoDB;
-* PUT /lections/lectionId update one lection data in  MongoDB;
-* DELETE /lections/lectionId delate one lections data from MongoDB;
+* POST _/lections_ downloads json lections data and save to MongoDB;
+* GET _/lections_ retrieve all lections data in json from MongoDB;
+* GET _/lections/lectionId_ retrieve one lection data in json from MongoDB;
+* PUT _/lections/lectionId_ update one lection data in  MongoDB;
+* DELETE _/lections/lectionId_ delate one lections data from MongoDB;
 
 **Timetables**
 
-* POST /timetables downloads json timetables data and save to MongoDB;
-* GET /timetables retrieve all timetables data in json from MongoDB;
-* PUT /timetables/timetableId update one timetables data in MongoDB;
-* DELETE /timetables/timetableId delate one timetables data from MongoDB;
+* POST _/timetables_ downloads json timetables data and save to MongoDB;
+* GET _/timetables_ retrieve all timetables data in json from MongoDB;
+* PUT _/timetables/timetableId_ update one timetables data in MongoDB;
+* DELETE _/timetables/timetableId_ delate one timetables data from MongoDB;
 
 **My DB structure:**
 ![My DB structure:](/DB-structure.png)
